@@ -11,8 +11,6 @@
 
 @interface DownloaderOperation : NSOperation
 
-@property (nonatomic, copy) NSString *URLString;
-
-@property (nonatomic, copy) void(^successBlock)(UIImage *image);
++ (instancetype)downloaderOperationWithURLString:(NSString *)URLString successBlock:(void(^)(UIImage *image))successBlock;
 
 @end
