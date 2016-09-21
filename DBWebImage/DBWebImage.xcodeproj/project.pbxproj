@@ -13,6 +13,7 @@
 		432646911D92B1D900AB4277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4326468F1D92B1D900AB4277 /* Main.storyboard */; };
 		432646931D92B1D900AB4277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432646921D92B1D900AB4277 /* Assets.xcassets */; };
 		432646961D92B1D900AB4277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432646941D92B1D900AB4277 /* LaunchScreen.storyboard */; };
+		432646A71D92B53800AB4277 /* DownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646A61D92B53800AB4277 /* DownloaderOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		432646921D92B1D900AB4277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432646951D92B1D900AB4277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		432646971D92B1D900AB4277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		432646A51D92B53800AB4277 /* DownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderOperation.h; sourceTree = "<group>"; };
+		432646A61D92B53800AB4277 /* DownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		432646851D92B1D900AB4277 /* DBWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				432646A41D92B4F700AB4277 /* DBWebImage */,
 				432646891D92B1D900AB4277 /* AppDelegate.h */,
 				4326468A1D92B1D900AB4277 /* AppDelegate.m */,
 				4326468C1D92B1D900AB4277 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				432646871D92B1D900AB4277 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		432646A41D92B4F700AB4277 /* DBWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				432646A51D92B53800AB4277 /* DownloaderOperation.h */,
+				432646A61D92B53800AB4277 /* DownloaderOperation.m */,
+			);
+			path = DBWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432646A71D92B53800AB4277 /* DownloaderOperation.m in Sources */,
 				4326468E1D92B1D900AB4277 /* ViewController.m in Sources */,
 				4326468B1D92B1D900AB4277 /* AppDelegate.m in Sources */,
 				432646881D92B1D900AB4277 /* main.m in Sources */,
