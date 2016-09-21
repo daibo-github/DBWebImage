@@ -10,4 +10,21 @@
 
 @implementation DownloaderOperation
 
+- (void)main
+{
+    NSURL *URL = [NSURL URLWithString:self.URLString];
+    NSData *data = [NSData dataWithContentsOfURL:URL];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    if (self.successBlock != nil) {
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            self.successBlock(image);
+        }];
+    }
+    
+    
+}
+
 @end

@@ -24,6 +24,16 @@
     
     DownloaderOperation *op = [[DownloaderOperation alloc] init];
     
+    op.URLString = @"https://raw.githubusercontent.com/daibo-github/ServerFileDownLoadJSON/master/apps.json";
+    
+//    void (^successBlock)() = ^(UIImage *image){
+//        NSLog(@"%@",[NSThread currentThread]);       
+//    };
+//    op.successBlock = successBlock;
+    [op setSuccessBlock:^(UIImage *image) {
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    
     [self.queue addOperation:op];
 }
 

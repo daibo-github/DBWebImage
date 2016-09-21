@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DownloaderOperation : NSOperation
+
+@property (nonatomic, copy) NSString *URLString;
+
+@property (nonatomic, copy) void(^successBlock)(UIImage *image);
 
 @end
