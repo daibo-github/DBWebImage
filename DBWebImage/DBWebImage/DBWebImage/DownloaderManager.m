@@ -40,9 +40,18 @@
         self.OPCaches = [[NSMutableDictionary alloc] init];
         self.queue = [[NSOperationQueue alloc] init];
         self.imagesCache = [[NSMutableDictionary alloc] init];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearMemory) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
     }
     
     return self;
+}
+
+- (void)clearMemory
+{
+    [self.imagesCache removeAllObjects];
+    [self.OPCaches removeAllObjects];
+    [self.queue cancelAllOperations];
 }
 
 - (void)downloadImageWithURLString:(NSString *)URLString successBlock:(void(^)(UIImage *image))successBlock
