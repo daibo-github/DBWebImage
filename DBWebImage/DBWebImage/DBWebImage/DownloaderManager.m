@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) NSOperationQueue *queue;
 
+@property (nonatomic, strong) NSMutableDictionary *imagesCache;
+
 @end
 
 @implementation DownloaderManager
@@ -37,6 +39,7 @@
         
         self.OPCaches = [[NSMutableDictionary alloc] init];
         self.queue = [[NSOperationQueue alloc] init];
+        self.imagesCache = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -44,17 +47,32 @@
 
 - (void)downloadImageWithURLString:(NSString *)URLString successBlock:(void(^)(UIImage *image))successBlock
 {
+    if ([self checkCaches:URLString]) {
+        
+        UIImage *image = [self.imagesCache objectForKey:URLString];
+        
+        if (successBlock) {
+            successBlock(image);
+        }
+        
+        return;
+    }
+    
     if ([self.OPCaches objectForKey:URLString]) {
         return;
     }
     
     void(^managerBlock)() = ^(UIImage *image){
         
+        NSLog(@"从网络加载...%@",URLString);
+        
         if (successBlock) {
             successBlock(image);
         }
         
         [self.OPCaches removeObjectForKey:URLString];
+        
+        [self.imagesCache setObject:image forKey:URLString];
         
     };
     
@@ -63,6 +81,29 @@
     [self.OPCaches setObject:op forKey:URLString];
     
     [self.queue addOperation:op];
+}
+
+- (BOOL)checkCaches:(NSString *)URLString
+{
+    if ([self.imagesCache objectForKey:URLString]) {
+        
+        NSLog(@"从内存加载...%@",URLString);
+        
+        return YES;
+    }
+    
+    UIImage *cacheImage = [UIImage imageWithContentsOfFile:[URLString appendCaches]];
+    
+    if (cacheImage) {
+        
+        NSLog(@"从沙盒加载...%@",URLString);
+        
+        [self.imagesCache setObject:cacheImage forKey:URLString];
+        
+        return YES;
+    }
+    
+    return NO;
 }
 
 - (void)cancelDownloadingOperationWithLastURLString:(NSString *)lastURLString

@@ -23,6 +23,7 @@
 		432646C21D92D41F00AB4277 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646BB1D92D41F00AB4277 /* AFURLResponseSerialization.m */; };
 		432646C31D92D41F00AB4277 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646BD1D92D41F00AB4277 /* AFURLSessionManager.m */; };
 		432646C61D92D42600AB4277 /* APPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646C51D92D42600AB4277 /* APPModel.m */; };
+		43A1DDA21D9420A1007795C1 /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A1DDA11D9420A1007795C1 /* NSString+path.m */; };
 		43D56E011D93546100DA7DCB /* DownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D56E001D93546100DA7DCB /* DownloaderManager.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		432646BD1D92D41F00AB4277 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		432646C41D92D42600AB4277 /* APPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPModel.h; sourceTree = "<group>"; };
 		432646C51D92D42600AB4277 /* APPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPModel.m; sourceTree = "<group>"; };
+		43A1DDA01D9420A1007795C1 /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
+		43A1DDA11D9420A1007795C1 /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
 		43D56DFF1D93546100DA7DCB /* DownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderManager.h; sourceTree = "<group>"; };
 		43D56E001D93546100DA7DCB /* DownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,8 @@
 		432646A41D92B4F700AB4277 /* DBWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				43A1DDA01D9420A1007795C1 /* NSString+path.h */,
+				43A1DDA11D9420A1007795C1 /* NSString+path.m */,
 				432646A51D92B53800AB4277 /* DownloaderOperation.h */,
 				432646A61D92B53800AB4277 /* DownloaderOperation.m */,
 				43D56DFF1D93546100DA7DCB /* DownloaderManager.h */,
@@ -242,6 +247,7 @@
 				432646AF1D92D41300AB4277 /* YYClassInfo.m in Sources */,
 				432646BE1D92D41F00AB4277 /* AFHTTPSessionManager.m in Sources */,
 				432646C11D92D41F00AB4277 /* AFURLRequestSerialization.m in Sources */,
+				43A1DDA21D9420A1007795C1 /* NSString+path.m in Sources */,
 				432646C31D92D41F00AB4277 /* AFURLSessionManager.m in Sources */,
 				432646BF1D92D41F00AB4277 /* AFNetworkReachabilityManager.m in Sources */,
 				43D56E011D93546100DA7DCB /* DownloaderManager.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "DownloaderOperation.h"
 
+
 @interface DownloaderOperation ()
 
 @property (nonatomic, copy) NSString *URLString;
@@ -37,6 +38,11 @@
     NSURL *URL = [NSURL URLWithString:self.URLString];
     NSData *data = [NSData dataWithContentsOfURL:URL];
     UIImage *image = [UIImage imageWithData:data];
+    
+    if (image) {
+        
+        [data writeToFile:[self.URLString appendCaches] atomically:YES];
+    }
     
     if (self.isCancelled) {
         NSLog(@"取消--%@",self.URLString);
