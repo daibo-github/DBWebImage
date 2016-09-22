@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import "YYModel.h"
 #import "APPModel.h"
+#import "DownloaderManager.h"
 
 @interface ViewController ()
 
@@ -54,14 +55,12 @@
     
     self.lastURLString = app.icon;
     
-    DownloaderOperation *op = [DownloaderOperation downloaderOperationWithURLString:app.icon successBlock:^(UIImage *image) {
-        
+    DownloaderManager *manager = [DownloaderManager sharedManager];
+    
+    [manager downloadImageWithURLString:app.icon successBlock:^(UIImage *image) {
         self.iconImageView.image = image;
     }];
-    
-    [self.OPCaches setObject:op forKey:app.icon];
-    
-    [self.queue addOperation:op];
+
 }
 
 - (void)loadJSONData

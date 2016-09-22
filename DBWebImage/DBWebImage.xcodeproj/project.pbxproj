@@ -23,6 +23,7 @@
 		432646C21D92D41F00AB4277 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646BB1D92D41F00AB4277 /* AFURLResponseSerialization.m */; };
 		432646C31D92D41F00AB4277 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646BD1D92D41F00AB4277 /* AFURLSessionManager.m */; };
 		432646C61D92D42600AB4277 /* APPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646C51D92D42600AB4277 /* APPModel.m */; };
+		43D56E011D93546100DA7DCB /* DownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D56E001D93546100DA7DCB /* DownloaderManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		432646BD1D92D41F00AB4277 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		432646C41D92D42600AB4277 /* APPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPModel.h; sourceTree = "<group>"; };
 		432646C51D92D42600AB4277 /* APPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPModel.m; sourceTree = "<group>"; };
+		43D56DFF1D93546100DA7DCB /* DownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderManager.h; sourceTree = "<group>"; };
+		43D56E001D93546100DA7DCB /* DownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 			children = (
 				432646A51D92B53800AB4277 /* DownloaderOperation.h */,
 				432646A61D92B53800AB4277 /* DownloaderOperation.m */,
+				43D56DFF1D93546100DA7DCB /* DownloaderManager.h */,
+				43D56E001D93546100DA7DCB /* DownloaderManager.m */,
 			);
 			path = DBWebImage;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				432646C11D92D41F00AB4277 /* AFURLRequestSerialization.m in Sources */,
 				432646C31D92D41F00AB4277 /* AFURLSessionManager.m in Sources */,
 				432646BF1D92D41F00AB4277 /* AFNetworkReachabilityManager.m in Sources */,
+				43D56E011D93546100DA7DCB /* DownloaderManager.m in Sources */,
 				432646881D92B1D900AB4277 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
