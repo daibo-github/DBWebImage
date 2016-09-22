@@ -65,6 +65,22 @@
     [self.queue addOperation:op];
 }
 
+- (void)cancelDownloadingOperationWithLastURLString:(NSString *)lastURLString
+{
+    DownloaderOperation *op = [self.OPCaches objectForKey:lastURLString];
+    
+    if (op != nil) {
+        
+        [op cancel];
+        
+        [self.OPCaches removeObjectForKey:lastURLString];
+    }
+    
+//    [[self.OPCaches objectForKey:lastURLString] cancel];
+//    
+//    [self.OPCaches removeObjectForKey:lastURLString];
+}
+
 
 
 @end

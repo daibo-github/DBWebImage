@@ -48,9 +48,8 @@
     
     if (![app.icon isEqualToString:self.lastURLString] && self.lastURLString != nil) {
         
-        [[self.OPCaches objectForKey:self.lastURLString] cancel];
-        
-        [self.OPCaches removeObjectForKey:self.lastURLString];
+        [[DownloaderManager sharedManager] cancelDownloadingOperationWithLastURLString:self.lastURLString];
+
     }
     
     self.lastURLString = app.icon;
