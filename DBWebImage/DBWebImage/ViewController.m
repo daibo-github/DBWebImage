@@ -12,6 +12,7 @@
 #import "YYModel.h"
 #import "APPModel.h"
 #import "DownloaderManager.h"
+#import "UIImageView+DB.h"
 
 @interface ViewController ()
 
@@ -46,19 +47,7 @@
     
     APPModel *app = self.appList[random];
     
-    if (![app.icon isEqualToString:self.lastURLString] && self.lastURLString != nil) {
-        
-        [[DownloaderManager sharedManager] cancelDownloadingOperationWithLastURLString:self.lastURLString];
-
-    }
-    
-    self.lastURLString = app.icon;
-    
-    DownloaderManager *manager = [DownloaderManager sharedManager];
-    
-    [manager downloadImageWithURLString:app.icon successBlock:^(UIImage *image) {
-        self.iconImageView.image = image;
-    }];
+    [self.iconImageView DB_setImageWithURLString:app.icon];
 
 }
 

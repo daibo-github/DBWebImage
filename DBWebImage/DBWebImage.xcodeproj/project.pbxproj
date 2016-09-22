@@ -24,6 +24,7 @@
 		432646C31D92D41F00AB4277 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646BD1D92D41F00AB4277 /* AFURLSessionManager.m */; };
 		432646C61D92D42600AB4277 /* APPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 432646C51D92D42600AB4277 /* APPModel.m */; };
 		43A1DDA21D9420A1007795C1 /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A1DDA11D9420A1007795C1 /* NSString+path.m */; };
+		43A1DDA51D942517007795C1 /* UIImageView+DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A1DDA41D942517007795C1 /* UIImageView+DB.m */; };
 		43D56E011D93546100DA7DCB /* DownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D56E001D93546100DA7DCB /* DownloaderManager.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		432646C51D92D42600AB4277 /* APPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPModel.m; sourceTree = "<group>"; };
 		43A1DDA01D9420A1007795C1 /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
 		43A1DDA11D9420A1007795C1 /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
+		43A1DDA31D942517007795C1 /* UIImageView+DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DB.h"; sourceTree = "<group>"; };
+		43A1DDA41D942517007795C1 /* UIImageView+DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DB.m"; sourceTree = "<group>"; };
 		43D56DFF1D93546100DA7DCB /* DownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderManager.h; sourceTree = "<group>"; };
 		43D56E001D93546100DA7DCB /* DownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +134,8 @@
 				432646A61D92B53800AB4277 /* DownloaderOperation.m */,
 				43D56DFF1D93546100DA7DCB /* DownloaderManager.h */,
 				43D56E001D93546100DA7DCB /* DownloaderManager.m */,
+				43A1DDA31D942517007795C1 /* UIImageView+DB.h */,
+				43A1DDA41D942517007795C1 /* UIImageView+DB.m */,
 			);
 			path = DBWebImage;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				432646C21D92D41F00AB4277 /* AFURLResponseSerialization.m in Sources */,
 				4326468B1D92B1D900AB4277 /* AppDelegate.m in Sources */,
 				432646AF1D92D41300AB4277 /* YYClassInfo.m in Sources */,
+				43A1DDA51D942517007795C1 /* UIImageView+DB.m in Sources */,
 				432646BE1D92D41F00AB4277 /* AFHTTPSessionManager.m in Sources */,
 				432646C11D92D41F00AB4277 /* AFURLRequestSerialization.m in Sources */,
 				43A1DDA21D9420A1007795C1 /* NSString+path.m in Sources */,
